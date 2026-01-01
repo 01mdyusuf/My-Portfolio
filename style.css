@@ -431,43 +431,63 @@ footer p {
   text-align: center;
 }
 
-/* 🌙 FIXED & IMPROVED DARK MODE UI */
+/* 🌙 FINAL DARK MODE UI — FULLY FIXED */
 body.dark-mode {
   background-color: #121212 !important;
   color: #ffffff !important;
 }
 
+/* Text */
 body.dark-mode p,
-body.dark-mode a,
 body.dark-mode h1,
 body.dark-mode h2,
 body.dark-mode h3,
+body.dark-mode a,
 body.dark-mode .section__text__p1,
 body.dark-mode .section__text__p2,
 body.dark-mode .experience-sub-title {
   color: #ffffff !important;
 }
 
-/* Cards / Sections */
+/* Cards / Containers */
 body.dark-mode .details-container,
 body.dark-mode .color-container,
-body.dark-mode .contact-info-upper-container {
-  background-color: #1e1e1e !important;
-  border: 1px solid #333 !important;
+body.dark-mode .contact-info-upper-container,
+body.dark-mode footer {
+  background-color: #1a1a1a !important;
+  border-color: #333 !important;
 }
 
-/* Icons: Visible in Dark Mode */
+/* Fix Project Cards */
+body.dark-mode .color-container {
+  background-color: #1f1f1f !important;
+}
+
+/* Fix Profile Box Image */
+body.dark-mode .section__pic-container img,
+body.dark-mode .about-pic {
+  background-color: transparent !important;
+  filter: brightness(105%) !important;
+}
+
+/* Icons: high contrast white */
 body.dark-mode .icon {
-  filter: brightness(0) invert(1) !important;
+  filter: invert(1) brightness(200%) contrast(200%) !important;
+}
+
+/* Project images */
+body.dark-mode .project-img {
+  filter: brightness(110%) !important;
 }
 
 /* Buttons */
 body.dark-mode .btn-color-1,
 body.dark-mode .btn-color-2 {
-  background: transparent !important;
-  border-color: #cccccc !important;
+  border: 1px solid #ffffff !important;
   color: #ffffff !important;
+  background: transparent !important;
 }
+
 body.dark-mode .btn-color-1:hover,
 body.dark-mode .btn-color-2:hover {
   background: #ffffff !important;
@@ -477,26 +497,29 @@ body.dark-mode .btn-color-2:hover {
 /* Navbar */
 body.dark-mode nav {
   background-color: #1a1a1a !important;
-  border-bottom: 1px solid #333 !important;
+  border-bottom: 1px solid #444 !important;
+}
+
+/* Hamburger Menu Background */
+body.dark-mode .menu-links {
+  background-color: #1a1a1a !important;
+}
+
+body.dark-mode .hamburger-icon span {
+  background-color: white !important;
 }
 
 /* Dark Mode Toggle Icon */
 .dark-mode-btn {
   background: none !important;
   border: none !important;
-  font-size: 1.6rem !important;
+  font-size: 1.5rem !important;
+  margin: 0 1rem !important;
   cursor: pointer;
-  margin-left: 1rem;
-  transition: 0.3s;
   color: #ffdd57 !important;
 }
 
-/* Light mode toggle color */
 body.dark-mode .dark-mode-btn {
   color: #ffffff !important;
 }
 
-
-body.dark-mode .dark-mode-btn {
-  color: white;
-}
