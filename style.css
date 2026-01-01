@@ -513,11 +513,9 @@ body.dark-mode #socials-container img {
   filter: invert(1) brightness(200%) contrast(200%) !important;
 }
 
-/* Fix BIG white box behind profile image */
-body.dark-mode .section__pic-container {
-  background: none !important;
-  border: none !important;
-  box-shadow: none !important;
+/* Fix Section Background in Dark Mode */
+body.dark-mode section {
+  background: transparent !important;
 }
 
 
