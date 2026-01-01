@@ -487,3 +487,17 @@ body.dark-mode footer img {
   filter: invert(1);
 }
 
+/*dark btn*/
+.dark-mode-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: 0.3s;
+  color: #ffdd57;   /* yellow sun for better visibility */
+}
+
+body.dark-mode .dark-mode-btn {
+  color: white;
+}
