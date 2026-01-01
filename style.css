@@ -538,3 +538,16 @@ body.dark-mode .dark-mode-btn {
   color: #ffffff !important;
 }
 
+/* Remove white box behind profile image */
+.section__pic-container {
+  background: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Ensure clean look in dark mode */
+body.dark-mode .section__pic-container {
+  background: transparent !important;
+}
+
