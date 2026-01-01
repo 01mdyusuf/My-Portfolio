@@ -431,72 +431,71 @@ footer p {
   text-align: center;
 }
 
-/* 🌙 Improved DARK MODE UI */
+/* 🌙 FIXED & IMPROVED DARK MODE UI */
 body.dark-mode {
-  background-color: #121212;
-  color: #ffffff;
+  background-color: #121212 !important;
+  color: #ffffff !important;
 }
 
-body.dark-mode p {
-  color: #bbbbbb;
+body.dark-mode p,
+body.dark-mode a,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode .section__text__p1,
+body.dark-mode .section__text__p2,
+body.dark-mode .experience-sub-title {
+  color: #ffffff !important;
 }
 
-body.dark-mode nav {
-  background-color: #1e1e1e;
-  border-bottom: 1px solid #333;
-}
-
+/* Cards / Sections */
 body.dark-mode .details-container,
 body.dark-mode .color-container,
-body.dark-mode footer,
 body.dark-mode .contact-info-upper-container {
-  background-color: #1e1e1e;
-  border: 1px solid #333;
-  box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.05);
+  background-color: #1e1e1e !important;
+  border: 1px solid #333 !important;
 }
 
-body.dark-mode .title {
-  color: #ffffff;
+/* Icons: Visible in Dark Mode */
+body.dark-mode .icon {
+  filter: brightness(0) invert(1) !important;
 }
 
-body.dark-mode a {
-  color: #ffffff;
-}
-
-body.dark-mode a:hover {
-  color: #ffdd57;
-}
-
+/* Buttons */
 body.dark-mode .btn-color-1,
 body.dark-mode .btn-color-2 {
-  background-color: transparent;
-  border: 1px solid #888;
-  color: #ffffff;
+  background: transparent !important;
+  border-color: #cccccc !important;
+  color: #ffffff !important;
 }
-
 body.dark-mode .btn-color-1:hover,
 body.dark-mode .btn-color-2:hover {
-  background-color: #ffffff;
-  color: #121212;
+  background: #ffffff !important;
+  color: #000000 !important;
 }
 
-body.dark-mode img.icon,
-body.dark-mode .project-img,
-body.dark-mode .section__pic-container img,
-body.dark-mode footer img {
-  filter: invert(1);
+/* Navbar */
+body.dark-mode nav {
+  background-color: #1a1a1a !important;
+  border-bottom: 1px solid #333 !important;
 }
 
-/*dark btn*/
+/* Dark Mode Toggle Icon */
 .dark-mode-btn {
-  background: none;
-  border: none;
-  font-size: 1.5rem;
+  background: none !important;
+  border: none !important;
+  font-size: 1.6rem !important;
   cursor: pointer;
   margin-left: 1rem;
   transition: 0.3s;
-  color: #ffdd57;   /* yellow sun for better visibility */
+  color: #ffdd57 !important;
 }
+
+/* Light mode toggle color */
+body.dark-mode .dark-mode-btn {
+  color: #ffffff !important;
+}
+
 
 body.dark-mode .dark-mode-btn {
   color: white;
