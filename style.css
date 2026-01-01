@@ -502,26 +502,32 @@ body.dark-mode .hamburger-icon span {
   background-color: white !important;
 }
 
-/* Fix big man silhouette in Dark Mode */
+/* Fix big image in About section */
 body.dark-mode .about-pic {
   filter: invert(1) brightness(200%) contrast(200%) !important;
 }
 
-
-/* Sharper icons in Dark Mode */
+/* Fix social icons */
 body.dark-mode #socials-container img {
   filter: invert(1) brightness(200%) contrast(200%) !important;
 }
 
-/* Fix Section Background in Dark Mode */
+/* Remove section background in Dark Mode */
 body.dark-mode section {
   background: transparent !important;
 }
 
-body.dark-mode #profile img {
-  background: none !important;
+/* 🔥 Remove giant white box behind profile image */
+.section__pic-container {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
 }
 
+/* 🟢 Keep nice rounded profile photo */
+.section__pic-container img {
+  border-radius: 20px !important;
+}
 
 
 /* Dark Mode Toggle Icon */
@@ -537,17 +543,3 @@ body.dark-mode #profile img {
 body.dark-mode .dark-mode-btn {
   color: #ffffff !important;
 }
-
-/* Remove white box behind profile image */
-.section__pic-container {
-  background: transparent !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  border: none !important;
-}
-
-/* Ensure clean look in dark mode */
-body.dark-mode .section__pic-container {
-  background: transparent !important;
-}
-
