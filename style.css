@@ -431,39 +431,26 @@ footer p {
   text-align: center;
 }
 
-/* DARK MODE */
+/* DARK MODE THEME */
 body.dark-mode {
   background-color: #121212;
-  color: #e0e0e0;
-}
-
-body.dark-mode p,
-body.dark-mode a,
-body.dark-mode .experience-sub-title {
-  color: #dcdcdc;
+  color: #fff;
 }
 
 body.dark-mode nav,
 body.dark-mode .details-container,
 body.dark-mode .color-container,
+body.dark-mode footer,
 body.dark-mode .contact-info-upper-container {
-  background-color: #1e1e1e;
-  border-color: #444;
-}
-
-body.dark-mode .project-title {
-  color: #ffffff;
-}
-
-body.dark-mode .btn-color-2:hover {
-  border-color: #aaa;
+  background-color: #1b1b1b;
+  border-color: #333;
 }
 
 .dark-mode-btn {
+  font-size: 1.6rem;
   background: none;
   border: none;
-  font-size: 1.7rem;
   cursor: pointer;
-  margin-left: 1rem;
-  transition: 0.3s ease-in-out;
+  margin-right: 1rem;
 }
+
