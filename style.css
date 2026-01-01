@@ -431,26 +431,59 @@ footer p {
   text-align: center;
 }
 
-/* DARK MODE THEME */
+/* 🌙 Improved DARK MODE UI */
 body.dark-mode {
   background-color: #121212;
-  color: #fff;
+  color: #ffffff;
 }
 
-body.dark-mode nav,
+body.dark-mode p {
+  color: #bbbbbb;
+}
+
+body.dark-mode nav {
+  background-color: #1e1e1e;
+  border-bottom: 1px solid #333;
+}
+
 body.dark-mode .details-container,
 body.dark-mode .color-container,
 body.dark-mode footer,
 body.dark-mode .contact-info-upper-container {
-  background-color: #1b1b1b;
-  border-color: #333;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.05);
 }
 
-.dark-mode-btn {
-  font-size: 1.6rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  margin-right: 1rem;
+body.dark-mode .title {
+  color: #ffffff;
+}
+
+body.dark-mode a {
+  color: #ffffff;
+}
+
+body.dark-mode a:hover {
+  color: #ffdd57;
+}
+
+body.dark-mode .btn-color-1,
+body.dark-mode .btn-color-2 {
+  background-color: transparent;
+  border: 1px solid #888;
+  color: #ffffff;
+}
+
+body.dark-mode .btn-color-1:hover,
+body.dark-mode .btn-color-2:hover {
+  background-color: #ffffff;
+  color: #121212;
+}
+
+body.dark-mode img.icon,
+body.dark-mode .project-img,
+body.dark-mode .section__pic-container img,
+body.dark-mode footer img {
+  filter: invert(1);
 }
 
