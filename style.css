@@ -518,6 +518,11 @@ body.dark-mode section {
   background: transparent !important;
 }
 
+body.dark-mode #profile img {
+  background: none !important;
+}
+
+
 
 /* Dark Mode Toggle Icon */
 .dark-mode-btn {
