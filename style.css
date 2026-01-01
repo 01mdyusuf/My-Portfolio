@@ -463,13 +463,6 @@ body.dark-mode .color-container {
   background-color: #1f1f1f !important;
 }
 
-/* Fix Profile Box Image */
-body.dark-mode .section__pic-container img,
-body.dark-mode .about-pic {
-  background-color: transparent !important;
-  filter: brightness(105%) !important;
-}
-
 /* Icons: high contrast white */
 body.dark-mode .icon {
   filter: invert(1) brightness(200%) contrast(200%) !important;
@@ -510,9 +503,10 @@ body.dark-mode .hamburger-icon span {
 }
 
 /* Fix big man silhouette in Dark Mode */
-body.dark-mode #about .section__pic-container img {
+body.dark-mode .about-pic {
   filter: invert(1) brightness(200%) contrast(200%) !important;
 }
+
 
 /* Sharper icons in Dark Mode */
 body.dark-mode #socials-container img {
