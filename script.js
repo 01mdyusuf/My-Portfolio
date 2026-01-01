@@ -5,27 +5,19 @@ function toggleMenu() {
   icon.classList.toggle("open");
 }
 
-/*dark menu*/
-const darkBtn = document.getElementById("dark-mode-toggle");
-const darkBtnMobile = document.getElementById("dark-mode-toggle-mobile");
-const body = document.body;
 
-// Load previous preference
+// DARK MODE
+const body = document.body;
+const btn = document.getElementById("dark-mode-toggle");
+
+// Load saved state
 if (localStorage.getItem("theme") === "dark") {
   body.classList.add("dark-mode");
-  if (darkBtn) darkBtn.textContent = "☀️";
-  if (darkBtnMobile) darkBtnMobile.textContent = "☀️";
+  btn.textContent = "☀️";
 }
 
-function toggleDarkMode() {
-  body.classList.toggle("dark-mode");
-
-  const isDark = body.classList.contains("dark-mode");
+btn.addEventListener("click", () => {
+  const isDark = body.classList.toggle("dark-mode");
+  btn.textContent = isDark ? "☀️" : "🌙";
   localStorage.setItem("theme", isDark ? "dark" : "light");
-
-  if (darkBtn) darkBtn.textContent = isDark ? "☀️" : "🌙";
-  if (darkBtnMobile) darkBtnMobile.textContent = isDark ? "☀️" : "🌙";
-}
-
-if (darkBtn) darkBtn.addEventListener("click", toggleDarkMode);
-if (darkBtnMobile) darkBtnMobile.addEventListener("click", toggleDarkMode);
+});
