@@ -39,9 +39,11 @@ nav,
 }
 
 nav {
-  justify-content: space-around;
+  display: flex;
   align-items: center;
-  height: 17vh;
+  justify-content: space-between;
+  padding: 0 10%;
+  height: 80px;
 }
 
 .nav-links {
@@ -219,11 +221,9 @@ article {
 /* SECTIONS */
 
 section {
-  padding-top: 4vh;
-  height: 96vh;
-  margin: 0 10rem;
+ padding: 4vh 10%;
+  min-height: 100vh;
   box-sizing: border-box;
-  min-height: fit-content;
 }
 
 .section-container {
@@ -236,7 +236,7 @@ section {
   display: flex;
   justify-content: center;
   gap: 5rem;
-  height: 80vh;
+  min-height: calc(100vh - 80px);
 }
 
 /* PROFILE IMAGE CONTAINER  */
@@ -584,11 +584,6 @@ body.dark-mode .hamburger-icon span {
   background-color: white !important;
 }
 
-/* Fix big image in About section */
-body.dark-mode .about-pic {
-  filter: invert(1) brightness(200%) contrast(200%) !important;
-}
-
 /* Fix social icons */
 body.dark-mode #socials-container img {
   filter: invert(1) brightness(200%) contrast(200%) !important;
@@ -677,12 +672,6 @@ body:not(.dark-mode) .theme-toggle i.fa-sun {
   color: #f4b400;
 } */
 
-/* FIX NAVBAR LAYOUT */
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 
 /* Keep theme toggle centered */
 .theme-toggle {
