@@ -165,7 +165,7 @@ section {
 #profile {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 5rem;
   height: 80vh;
 }
 
@@ -437,7 +437,7 @@ body.dark-mode {
   color: #ffffff !important;
 }
 
-/* Text */
+/* Dark */
 body.dark-mode p,
 body.dark-mode h1,
 body.dark-mode h2,
