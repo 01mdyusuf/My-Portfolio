@@ -546,9 +546,9 @@ body.dark-mode .color-container {
 }
 
 /* Icons: high contrast white */
-body.dark-mode .icon {
+/* body.dark-mode .icon {
   filter: invert(1) brightness(200%) contrast(200%) !important;
-}
+} */
 
 /* Project images */
 body.dark-mode .project-img {
@@ -585,9 +585,9 @@ body.dark-mode .hamburger-icon span {
 }
 
 /* Fix social icons */
-body.dark-mode #socials-container img {
+/* body.dark-mode #socials-container img {
   filter: invert(1) brightness(200%) contrast(200%) !important;
-}
+} */
 
 /* section background in Dark Mode */
 body.dark-mode section {
