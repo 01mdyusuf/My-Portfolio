@@ -169,18 +169,25 @@ section {
   height: 80vh;
 }
 
+/* PROFILE IMAGE CONTAINER – FINAL FIX */
 .section__pic-container {
-  display: flex;
-  height: 400px;
   width: 400px;
-  margin: auto 0;
-  border-radius: 2.5rem; 
-  overflow: hidden; 
+  height: 400px;
+  border-radius: 2.5rem;
+  overflow: hidden;          /* ⭐ THIS IS THE KEY */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
 }
 
+/* IMAGE */
 .section__pic-container img {
-  border-radius: 2rem;   
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         /* prevents stretching */
 }
+
 
 .section__text {
   align-self: center;
