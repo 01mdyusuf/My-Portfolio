@@ -99,7 +99,7 @@ a:hover {
 }
 
 .about-pic {
-  border-radius: 2rem;
+  border-radius: 2.5rem;
   background: transparent
 }
 
@@ -258,8 +258,9 @@ section {
 }
 
 .section__text {
-  flex: 1;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .section__text p {
@@ -425,6 +426,7 @@ article .icon {
 }
 
 .project-img {
+  flex-wrap: wrap;
   border-radius: 2rem;
   width: 90%;
   height: 90%;
@@ -582,10 +584,6 @@ body.dark-mode section {
   background: transparent !important;
 }
 
-body.dark-mode .section__pic-container {
-  background-color: #1e1e1e;
-}
-
 /* ===== THEME TOGGLE SWITCH ===== */
 
 .theme-toggle {
@@ -684,10 +682,13 @@ body.dark-mode .footer-nav a {
   color: white;
 }
 
-/* FORCE ALL ICONS & IMAGES WHITE IN DARK MODE */
-body.dark-mode img,
 body.dark-mode .icon,
 body.dark-mode svg {
   filter: invert(1) brightness(200%) !important;
+}
+
+/* protect photos */
+body.dark-mode img {
+  filter: none !important;
 }
 
