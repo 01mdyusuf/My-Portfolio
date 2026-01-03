@@ -225,7 +225,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 4em; /* gap b/w img and text */
+  gap: 6em; /* gap b/w img and text */
 }
 
 /* PROFILE SECTION */
@@ -245,8 +245,7 @@ section {
   width: 420px;
   height: 420px;
   display: flex;
-  justify-content: center;
-  gap: 4em; 
+  justify-content: center; 
   align-items: center;
 }
 
