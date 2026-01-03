@@ -491,21 +491,6 @@ footer {
   text-align: center;
 }
 
-/* FORCE FOOTER CENTERING */
-footer nav {
-  justify-content: center !important;
-}
-
-footer .nav-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-footer p {
-  text-align: center;
-}
-
 footer nav {
   display: flex;
   justify-content: center;
@@ -517,7 +502,13 @@ footer .nav-links-container {
 }
 
 footer .nav-links {
+  display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  text-align: center;
 }
 
 
