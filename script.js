@@ -37,6 +37,4 @@ if (mobileCheckbox) {
 
 // Load saved theme
 const savedTheme = localStorage.getItem("theme");
-if (savedTheme === "dark") {
-  setTheme(true);
-}
+setTheme(savedTheme === "dark");
