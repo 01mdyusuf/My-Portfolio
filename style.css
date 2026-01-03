@@ -233,7 +233,8 @@ section {
   padding: 5vh 10%;              /* equal top & bottom */
   display: flex;
   align-items: center;           /* vertical center */
-  justify-content: center;       /* horizontal center */
+  justify-content: center; 
+  gap: 6rem;                    /* Gap b/w img and text */
   box-sizing: border-box;
 }
 
