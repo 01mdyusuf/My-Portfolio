@@ -7,15 +7,12 @@
   display: none;
 }
 
+/* ================= MOBILE & TABLET FIX ================= */
+
+/* Tablet & below */
 @media (max-width: 1200px) {
-  #dark-mode-toggle {
-    display: none;
-  }
 
-  #dark-mode-toggle-mobile {
-    display: inline-flex;
-  }
-
+  /* Navbar switch */
   #desktop-nav {
     display: none;
   }
@@ -24,20 +21,54 @@
     display: flex;
   }
 
+  /* Profile layout */
   .section-container {
     flex-direction: column;
+    align-items: center;
     gap: 2rem;
+    width: 100%;
+    margin: 0 auto;
   }
 
+  /* Profile image */
   .section__pic-container {
+    width: 100%;
     max-width: 300px;
+    aspect-ratio: 1 / 1;
+    border-radius: 2.5rem;
+    overflow: hidden;
     margin: 0 auto 1.5rem;
+  }
+
+  .section__pic-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Text center */
+  .section__text {
+    width: 100%;
+    text-align: center;
   }
 }
 
-@media (max-width: 600px) {
+/* Mobile only */
+@media (max-width: 768px) {
+
+  section {
+    width: 100%;
+    padding: 3rem 1.25rem;
+    margin: 0;
+  }
+
+  .section-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
   .section__pic-container {
-    max-width: 260px;
+    max-width: 280px;
   }
 
   .title {
@@ -46,5 +77,21 @@
 
   .section__text__p2 {
     font-size: 1.2rem;
+  }
+
+  .btn-container {
+    flex-wrap: wrap;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+
+  .section__pic-container {
+    max-width: 240px;
+  }
+
+  .title {
+    font-size: 1.8rem;
   }
 }
