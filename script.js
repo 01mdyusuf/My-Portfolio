@@ -9,15 +9,36 @@ function toggleMenu() {
 // DARK MODE
 const body = document.body;
 const btn = document.getElementById("dark-mode-toggle");
+const btnMobile = document.getElementById("dark-mode-toggle-mobile");
 
-// Load saved state
-if (localStorage.getItem("theme") === "dark") {
-  body.classList.add("dark-mode");
-  btn.textContent = "☀️";
+function updateIcon() {
+  const isDark = body.classList.contains("dark-mode");
+  const icon = isDark ? "fa-sun" : "fa-moon";
+
+  if (btn) btn.innerHTML = `<i class="fa-solid ${icon}"></i>`;
+  if (btnMobile) btnMobile.innerHTML = `<i class="fa-solid ${icon}"></i>`;
 }
 
-btn.addEventListener("click", () => {
-  const isDark = body.classList.toggle("dark-mode");
-  btn.textContent = isDark ? "☀️" : "🌙";
-  localStorage.setItem("theme", isDark ? "dark" : "light");
+// Load saved theme
+if (localStorage.getItem("theme") === "dark") {
+  body.classList.add("dark-mode");
+}
+updateIcon();
+
+btn?.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+  localStorage.setItem(
+    "theme",
+    body.classList.contains("dark-mode") ? "dark" : "light"
+  );
+  updateIcon();
+});
+
+btnMobile?.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+  localStorage.setItem(
+    "theme",
+    body.classList.contains("dark-mode") ? "dark" : "light"
+  );
+  updateIcon();
 });
