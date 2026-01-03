@@ -1,3 +1,22 @@
+/* DARK MODE TOGGLE VISIBILITY */
+#dark-mode-toggle {
+  display: inline-flex;
+}
+
+#dark-mode-toggle-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  #dark-mode-toggle {
+    display: none;
+  }
+
+  #dark-mode-toggle-mobile {
+    display: inline-flex;
+  }
+}
+
 @media screen and (max-width: 1400px) {
   #profile {
     height: 83vh;
