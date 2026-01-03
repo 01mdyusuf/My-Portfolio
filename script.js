@@ -5,24 +5,22 @@ function toggleMenu() {
   icon.classList.toggle("open");
 }
 
-/* ===== DARK MODE SWITCH LOGIC ===== */
-
+// ===== DARK MODE SWITCH LOGIC =====
 const desktopCheckbox = document.getElementById("theme-checkbox-desktop");
 const mobileCheckbox = document.getElementById("theme-checkbox-mobile");
 
-// start in LIGHT mode
-document.body.classList.remove("dark-mode");
-
-function syncTheme(isDark) {
+function setDarkMode(isDark) {
   document.body.classList.toggle("dark-mode", isDark);
   desktopCheckbox.checked = isDark;
   mobileCheckbox.checked = isDark;
 }
 
+// Desktop toggle
 desktopCheckbox.addEventListener("change", () => {
-  syncTheme(desktopCheckbox.checked);
+  setDarkMode(desktopCheckbox.checked);
 });
 
+// Mobile toggle
 mobileCheckbox.addEventListener("change", () => {
-  syncTheme(mobileCheckbox.checked);
+  setDarkMode(mobileCheckbox.checked);
 });
