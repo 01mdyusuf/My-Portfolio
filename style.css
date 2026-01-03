@@ -617,3 +617,17 @@ body.dark-mode .section__pic-container {
 body.dark-mode .dark-mode-btn {
   color: #ffffff !important;
 }
+
+.dark-mode-btn i {
+  font-size: 1.4rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode-btn:hover i {
+  transform: rotate(20deg) scale(1.1);
+}
+
+body.dark-mode .dark-mode-btn i {
+  color: #ffd43b; /* Sun color */
+}
+
