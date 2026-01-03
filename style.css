@@ -721,19 +721,22 @@ body.dark-mode img {
     gap: 2rem;
   }
 
-  .section__pic-container {
-  width: 100%;
-  max-width: 300px;
-  aspect-ratio: auto;
-  margin-bottom: 1.5rem;/* important */
+ .section__pic-container {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1 / 1;   /* keep square */
+    border-radius: 2.5rem;
+    overflow: hidden;      /* IMPORTANT */
+    margin: 0 auto 1.5rem;
   }
 
   .section__pic-container img {
     width: 100%;
-    height: auto;
-    object-fit: contain; /* NO CROP */
+    height: 100%;
+    object-fit: cover;     /* FILL container */
+    border-radius: 2.5rem;
   }
-
+ 
   .section__text {
     text-align: center;
   }
