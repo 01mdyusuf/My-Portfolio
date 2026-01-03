@@ -217,26 +217,27 @@ article {
 /* SECTIONS */
 
 section {
- padding: 5vh 10%;
-  min-height: 100vh;
+  padding: 5vh 10%;
   box-sizing: border-box;
 }
 
 .section-container {
   gap: 5rem;
-  height: 80%;
   display: flex;
 }
 
 /* PROFILE SECTION */
 
 #profile {
+  min-height: calc(100vh - 80px); /* exact viewport minus navbar */
+  padding: 5vh 10%;              /* equal top & bottom */
   display: flex;
-  align-items: center;      /* vertical alignment of items */
-  justify-content: center;  /* center whole block horizontally */
-  padding-top: 4rem;        /* TOP SPACING */
-  gap: 5rem;
+  align-items: center;           /* vertical center */
+  justify-content: center;       /* horizontal center */
+  box-sizing: border-box;
 }
+
+
 
 
 /* PROFILE IMAGE CONTAINER  */
@@ -490,16 +491,36 @@ footer {
   text-align: center;
 }
 
-/* FOOTER NAV */
-.footer-nav {
+/* FORCE FOOTER CENTERING */
+footer nav {
+  justify-content: center !important;
+}
+
+footer .nav-links {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
-  list-style: none;
-  padding: 0;
-  margin: 0 0 1.5rem 0;
 }
+
+footer p {
+  text-align: center;
+}
+
+footer nav {
+  display: flex;
+  justify-content: center;
+}
+
+footer .nav-links-container {
+  display: flex;
+  justify-content: center;
+}
+
+footer .nav-links {
+  justify-content: center;
+}
+
+
 
 
 /* FINAL DARK MODE UI — FULLY FIXED */
