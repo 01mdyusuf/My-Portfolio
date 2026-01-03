@@ -648,9 +648,9 @@ body.dark-mode .dark-mode-btn i {
 
 /* Hide checkbox */
 .switch input {
+  position: absolute;
   opacity: 0;
-  width: 0;
-  height: 0;
+  pointer-events: none;
 }
 
 /* Slider */
@@ -688,8 +688,9 @@ body.dark-mode .dark-mode-btn i {
 
 /* Icons */
 .theme-toggle i {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #aaa;
+  pointer-events: none; /* icons won't block clicking */
 }
 
 body.dark-mode .theme-toggle i.fa-moon {
@@ -698,4 +699,17 @@ body.dark-mode .theme-toggle i.fa-moon {
 
 body:not(.dark-mode) .theme-toggle i.fa-sun {
   color: #f4b400;
+}
+
+/* FIX NAVBAR LAYOUT */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Keep theme toggle centered */
+.theme-toggle {
+  margin-left: auto;
+  margin-right: auto;
 }
