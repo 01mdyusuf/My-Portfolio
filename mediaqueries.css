@@ -7,12 +7,12 @@
   display: none;
 }
 
-/* ================= MOBILE & TABLET FIX ================= */
+/* ================= RESPONSIVE FIX – SINGLE SOURCE ================= */
 
-/* Tablet & below */
+/* ---------- TABLET & BELOW ---------- */
 @media (max-width: 1200px) {
 
-  /* Navbar switch */
+  /* Navbar */
   #desktop-nav {
     display: none;
   }
@@ -21,13 +21,17 @@
     display: flex;
   }
 
+  /* Sections */
+  section {
+    padding: 4rem 2rem;
+  }
+
   /* Profile layout */
   .section-container {
     flex-direction: column;
     align-items: center;
     gap: 2rem;
     width: 100%;
-    margin: 0 auto;
   }
 
   /* Profile image */
@@ -46,29 +50,26 @@
     object-fit: cover;
   }
 
-  /* Text center */
+  /* Text */
   .section__text {
     width: 100%;
     text-align: center;
   }
+
+  .btn-container {
+    flex-wrap: wrap;
+  }
 }
 
-/* Mobile only */
+/* ---------- MOBILE ---------- */
 @media (max-width: 768px) {
 
   section {
-    width: 100%;
     padding: 3rem 1.25rem;
-    margin: 0;
-  }
-
-  .section-container {
-    width: 100%;
-    max-width: 100%;
   }
 
   .section__pic-container {
-    max-width: 280px;
+    max-width: 260px;
   }
 
   .title {
@@ -78,17 +79,13 @@
   .section__text__p2 {
     font-size: 1.2rem;
   }
-
-  .btn-container {
-    flex-wrap: wrap;
-  }
 }
 
-/* Small phones */
+/* ---------- SMALL PHONES ---------- */
 @media (max-width: 480px) {
 
   .section__pic-container {
-    max-width: 240px;
+    max-width: 230px;
   }
 
   .title {
