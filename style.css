@@ -243,10 +243,11 @@ section {
 /* PROFILE IMAGE CONTAINER  */
 .section__pic-container {
   width: 420px;
-  height: 420px;
+  aspect-ratio: 1 / 1;   /* keeps square naturally */
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 
@@ -707,37 +708,34 @@ body.dark-mode img {
 
 
 
-/* ===== MOBILE FIX ===== */
+/* ===== MOBILE PROFILE FIX ===== */
 @media (max-width: 768px) {
 
-  /* Profile section height fix */
   #profile {
-    min-height: auto;        /* removing extra black space */
-    padding: 4rem 1.5rem;    /* equal top & bottom spacing */
+    min-height: auto;
+    padding: 3rem 1.5rem;
   }
 
-  /* Stack image & text vertically */
   .section-container {
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 2rem;
   }
 
-  /* Image container responsive */
   .section__pic-container {
-    width: 100%;
-    max-width: 280px;        /* mobile size */
-    height: auto;            /* keeps full image */
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: auto;
+  margin-bottom: 1.5rem;/* important */
   }
 
   .section__pic-container img {
     width: 100%;
-    height: auto;            /* NO crop */
-    object-fit: contain;     /* for clear image */
-    border-radius: 1.8rem;
+    height: auto;
+    object-fit: contain; /* NO CROP */
   }
 
-  /* Center text properly */
   .section__text {
     text-align: center;
   }
 }
+
