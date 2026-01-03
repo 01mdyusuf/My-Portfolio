@@ -603,34 +603,6 @@ body.dark-mode .section__pic-container {
   background-color: #1e1e1e;
 }
 
-
-/* Dark Mode Toggle Icon */
-.dark-mode-btn {
-  background: none !important;
-  border: none !important;
-  font-size: 1.5rem !important;
-  margin: 0 1rem !important;
-  cursor: pointer;
-  color: #ffdd57 !important;
-}
-
-body.dark-mode .dark-mode-btn {
-  color: #ffffff !important;
-}
-
-.dark-mode-btn i {
-  font-size: 1.4rem;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.dark-mode-btn:hover i {
-  transform: rotate(20deg) scale(1.1);
-}
-
-body.dark-mode .dark-mode-btn i {
-  color: #ffd43b; /* Sun color */
-}
-
 /* ===== THEME TOGGLE SWITCH ===== */
 
 .theme-toggle {
@@ -648,10 +620,13 @@ body.dark-mode .dark-mode-btn i {
 
 /* Hide checkbox */
 .switch input {
-  position: absolute;
   opacity: 0;
-  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 2;
 }
+
 
 /* Slider */
 .slider {
@@ -661,6 +636,7 @@ body.dark-mode .dark-mode-btn i {
   background: #e0e0e0;
   border-radius: 999px;
   transition: 0.3s ease;
+  box-shadow: inset 0 0 4px rgba(0,0,0,0.15);
 }
 
 /* Circle */
@@ -693,13 +669,13 @@ body.dark-mode .dark-mode-btn i {
   pointer-events: none; /* icons won't block clicking */
 }
 
-body.dark-mode .theme-toggle i.fa-moon {
+/* body.dark-mode .theme-toggle i.fa-moon {
   color: #ffd43b;
 }
 
 body:not(.dark-mode) .theme-toggle i.fa-sun {
   color: #f4b400;
-}
+} */
 
 /* FIX NAVBAR LAYOUT */
 nav {
@@ -710,6 +686,19 @@ nav {
 
 /* Keep theme toggle centered */
 .theme-toggle {
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
+
+/* ===== FIX ICON COLOR ===== */
+.theme-toggle i {
+  color: #6b6b6b !important; /* dark grey */
+  font-size: 1.1rem;
+}
+
+/* same color in dark mode */
+body.dark-mode .theme-toggle i {
+  color: #9a9a9a !important;
+}
+
