@@ -9,36 +9,22 @@ function toggleMenu() {
 // DARK MODE
 const body = document.body;
 const btn = document.getElementById("dark-mode-toggle");
-const btnMobile = document.getElementById("dark-mode-toggle-mobile");
-
-function updateIcon() {
-  const isDark = body.classList.contains("dark-mode");
-  const icon = isDark ? "fa-sun" : "fa-moon";
-
-  if (btn) btn.innerHTML = `<i class="fa-solid ${icon}"></i>`;
-  if (btnMobile) btnMobile.innerHTML = `<i class="fa-solid ${icon}"></i>`;
-}
+const icon = btn.querySelector("i");
 
 // Load saved theme
 if (localStorage.getItem("theme") === "dark") {
   body.classList.add("dark-mode");
+  icon.classList.replace("fa-moon", "fa-sun");
 }
-updateIcon();
 
-btn?.addEventListener("click", () => {
-  body.classList.toggle("dark-mode");
-  localStorage.setItem(
-    "theme",
-    body.classList.contains("dark-mode") ? "dark" : "light"
-  );
-  updateIcon();
-});
+btn.addEventListener("click", () => {
+  const isDark = body.classList.toggle("dark-mode");
 
-btnMobile?.addEventListener("click", () => {
-  body.classList.toggle("dark-mode");
-  localStorage.setItem(
-    "theme",
-    body.classList.contains("dark-mode") ? "dark" : "light"
-  );
-  updateIcon();
+  if (isDark) {
+    icon.classList.replace("fa-moon", "fa-sun");
+    localStorage.setItem("theme", "dark");
+  } else {
+    icon.classList.replace("fa-sun", "fa-moon");
+    localStorage.setItem("theme", "light");
+  }
 });
