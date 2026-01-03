@@ -631,3 +631,71 @@ body.dark-mode .dark-mode-btn i {
   color: #ffd43b; /* Sun color */
 }
 
+/* ===== THEME TOGGLE SWITCH ===== */
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Switch container */
+.switch {
+  position: relative;
+  width: 52px;
+  height: 28px;
+}
+
+/* Hide checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background: #e0e0e0;
+  border-radius: 999px;
+  transition: 0.3s ease;
+}
+
+/* Circle */
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  top: 3px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+
+/* Checked (Dark Mode) */
+.switch input:checked + .slider {
+  background: #2b2f3a;
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(24px);
+  background: #9aa0ff;
+}
+
+/* Icons */
+.theme-toggle i {
+  font-size: 1.1rem;
+  color: #aaa;
+}
+
+body.dark-mode .theme-toggle i.fa-moon {
+  color: #ffd43b;
+}
+
+body:not(.dark-mode) .theme-toggle i.fa-sun {
+  color: #f4b400;
+}
