@@ -225,7 +225,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6rem; /* gap b/w img and text */
+  gap: 8rem; /* gap b/w img and text */
 }
 
 /* PROFILE SECTION */
