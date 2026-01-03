@@ -5,30 +5,24 @@ function toggleMenu() {
   icon.classList.toggle("open");
 }
 
-/* ===== DARK MODE SWITCH (SYNCED) ===== */
+/* ===== DARK MODE SWITCH LOGIC ===== */
 
 const desktopCheckbox = document.getElementById("theme-checkbox-desktop");
 const mobileCheckbox = document.getElementById("theme-checkbox-mobile");
 
-function applyTheme(isDark) {
+// start in LIGHT mode
+document.body.classList.remove("dark-mode");
+
+function syncTheme(isDark) {
   document.body.classList.toggle("dark-mode", isDark);
   desktopCheckbox.checked = isDark;
   mobileCheckbox.checked = isDark;
-  localStorage.setItem("theme", isDark ? "dark" : "light");
 }
 
-// Load saved theme
-const savedTheme = localStorage.getItem("theme");
-if (savedTheme === "dark") {
-  applyTheme(true);
-}
-
-// Desktop toggle
 desktopCheckbox.addEventListener("change", () => {
-  applyTheme(desktopCheckbox.checked);
+  syncTheme(desktopCheckbox.checked);
 });
 
-// Mobile toggle
 mobileCheckbox.addEventListener("change", () => {
-  applyTheme(mobileCheckbox.checked);
+  syncTheme(mobileCheckbox.checked);
 });
