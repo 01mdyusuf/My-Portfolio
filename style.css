@@ -1,4 +1,4 @@
-                  /* GENERAL */
+ /* GENERAL */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
@@ -222,8 +222,10 @@ section {
 }
 
 .section-container {
-  gap: 5rem;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem; /* gap b/w img and text */
 }
 
 /* PROFILE SECTION */
@@ -234,11 +236,8 @@ section {
   display: flex;
   align-items: center;           /* vertical center */
   justify-content: center; 
-  gap: 6rem;                    /* Gap b/w img and text */
   box-sizing: border-box;
 }
-
-
 
 
 /* PROFILE IMAGE CONTAINER  */
@@ -489,6 +488,7 @@ article .icon {
 footer {
   width: 100%;
   padding: 3rem 1rem;
+  margin: 4rem 0;
   text-align: center;
 }
 
