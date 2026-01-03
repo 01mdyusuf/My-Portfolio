@@ -92,3 +92,29 @@
     font-size: 1.8rem;
   }
 }
+
+/* ===== FORCE SINGLE COLUMN ON MOBILE ===== */
+@media (max-width: 768px) {
+
+  /* Skills & About cards */
+  .about-containers {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .details-container {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  /* Projects */
+  #projects .about-containers {
+    flex-direction: column;
+  }
+
+  .color-container {
+    width: 100%;
+    max-width: 360px;
+  }
+}
