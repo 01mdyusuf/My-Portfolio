@@ -216,7 +216,7 @@ article {
 /* SECTIONS */
 
 section {
- padding: 4vh 10%;
+ padding: 5vh 10%;
   min-height: 100vh;
   box-sizing: border-box;
 }
@@ -240,6 +240,8 @@ section {
 .section__pic-container {
   width: 400px;
   height: 400px;
+  padding-top: 20px;
+  padding-right: 15px;
   border-radius: 2.5rem;
   overflow: hidden;          
   display: flex;
