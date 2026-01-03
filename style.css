@@ -234,8 +234,8 @@ section {
   display: flex;
   align-items: center;      /* vertical alignment of items */
   justify-content: center;  /* center whole block horizontally */
-  padding-top: 6rem;        /* TOP SPACING */
-  gap: 6rem;
+  padding-top: 4rem;        /* TOP SPACING */
+  gap: 5rem;
 }
 
 
