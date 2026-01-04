@@ -9,10 +9,14 @@
 
 body {
   font-family: "Poppins", sans-serif;
+   width: 100%;
+   overflow-x: hidden;
 }
 
 html {
   scroll-behavior: smooth;
+   width: 100%;
+   overflow-x: hidden;
 }
 
 p {
@@ -42,7 +46,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 10%;
+  padding: 0 2rem; 
   height: 80px;
 }
 
@@ -217,7 +221,7 @@ article {
 /* SECTIONS */
 
 section {
-  padding: 5vh 10%;
+ padding: 5vh 2rem;
   box-sizing: border-box;
 }
 
