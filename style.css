@@ -253,7 +253,7 @@ html, body {
 .section__pic-container {
   width: 100%;
   max-width: 420px;
-  aspect-ratio: 1 / 1;   /* keeps square naturally */
+  aspect-ratio: 1 / 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -718,18 +718,5 @@ body.dark-mode svg {
 /* protect photos */
 body.dark-mode img {
   filter: none !important;
-}
-
-
-@media (max-width: 768px) {
-  .contact-info-upper-container {
-    flex-direction: column;
-    width: 100%;
-    max-width: 360px;
-    padding: 1rem;
-  }
-  #contact {
-    gap: 1.5rem;
-  }
 }
 
