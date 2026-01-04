@@ -10,14 +10,10 @@
 
 body {
   font-family: "Poppins", sans-serif;
-   width: 100%;
-   overflow-x: hidden;
 }
 
 html {
   scroll-behavior: smooth;
-   width: 100%;
-   overflow-x: hidden;
 }
 
 p {
@@ -236,12 +232,20 @@ section {
 /* PROFILE SECTION */
 
 #profile {
-  min-height: calc(100vh - 80px); /* exact viewport minus navbar */
-  padding: 5vh 10%;              /* equal top & bottom */
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  padding: 5vh 2rem;        /* ✅ MOBILE SAFE */
   display: flex;
-  align-items: center;           /* vertical center */
-  justify-content: center; 
+  align-items: center;
+  justify-content: center;
   box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
 }
 
 
@@ -494,7 +498,7 @@ article .icon {
 footer {
   width: 100%;
   padding: 3rem 1rem;
-  margin: 4rem 0;
+  margin: 0;
   text-align: center;
 }
 
