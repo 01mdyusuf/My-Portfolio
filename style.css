@@ -252,7 +252,7 @@ html, body {
 /* PROFILE IMAGE CONTAINER  */
 .section__pic-container {
   width: 100%;
-  max-width: 420px
+  max-width: 420px;
   aspect-ratio: 1 / 1;   /* keeps square naturally */
   display: flex;
   justify-content: center;
