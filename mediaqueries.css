@@ -12,7 +12,7 @@
 /* ---------- TABLET & BELOW ---------- */
 @media (min-width: 1024px) {
   section {
-    padding: 5vh 10%;
+    padding: 5vh 2rem;
   }
 }
 
@@ -74,6 +74,13 @@
     padding: 3rem 1.25rem;
   }
 
+  .section-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+  }
+
   .section__pic-container {
     max-width: 260px;
   }
@@ -85,7 +92,24 @@
   .section__text__p2 {
     font-size: 1.2rem;
   }
+
+  .btn-container {
+    flex-wrap: wrap;
+  }
+
+  .about-containers,
+  #projects .about-containers {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .details-container,
+  .color-container {
+    width: 100%;
+    max-width: 360px;
+  }
 }
+
 
 /* ---------- SMALL PHONES ---------- */
 @media (max-width: 480px) {
@@ -99,28 +123,3 @@
   }
 }
 
-/* ===== FORCE SINGLE COLUMN ON MOBILE ===== */
-@media (max-width: 768px) {
-
-  /* Skills & About cards */
-  .about-containers {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  .details-container {
-    width: 100%;
-    max-width: 360px;
-  }
-
-  /* Projects */
-  #projects .about-containers {
-    flex-direction: column;
-  }
-
-  .color-container {
-    width: 100%;
-    max-width: 360px;
-  }
-}
