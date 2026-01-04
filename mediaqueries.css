@@ -4,12 +4,8 @@
    ===================================================== */
 
 
-/* ===================== LARGE SCREENS ===================== */
-/* No layout changes needed — desktop styles already apply */
-
-
 /* ===================== TABLETS & SMALL LAPTOPS ===================== */
-/* 992px is the real industry breakpoint */
+/* 992px = real-world breakpoint */
 @media (max-width: 992px) {
 
   /* NAVBAR */
@@ -21,12 +17,12 @@
     display: flex;
   }
 
-  /* GLOBAL SECTION PADDING */
+  /* GLOBAL SECTION SPACING */
   section {
     padding: 4rem 2rem;
   }
 
-  /* PROFILE LAYOUT (STACKS ONCE — HERE) */
+  /* STACK PROFILE LAYOUT */
   .section-container {
     flex-direction: column;
     gap: 2.5rem;
@@ -59,10 +55,10 @@
 
 
 /* ===================== MOBILE PHONES ===================== */
-/* 576px is the real mobile breakpoint */
+/* 576px = standard mobile */
 @media (max-width: 576px) {
 
-  /* TIGHTER SPACING */
+  /* TIGHTER SECTIONS */
   section {
     padding: 3rem 1.25rem;
   }
@@ -88,10 +84,46 @@
     max-width: 360px;
   }
 
-  /* CONTACT */
+  /* CONTACT CARD */
   .contact-info-upper-container {
     flex-direction: column;
     padding: 1rem;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 2.5rem 1.25rem 1.75rem;
+    text-align: center;
+  }
+
+  footer nav {
+    margin-bottom: 2rem; /* gap before copyright */
+  }
+
+  footer .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25rem;
+    padding: 0 1rem; /* prevent edge touching */
+    box-sizing: border-box;
+  }
+
+  footer .nav-links li {
+    margin: 0.25rem 0.5rem;
+  }
+
+  footer .nav-links li a {
+    font-size: 1rem;
+  }
+
+  footer p {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    opacity: 0.8;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
 }
 
@@ -106,40 +138,5 @@
 
   .title {
     font-size: 1.8rem;
-  }
-}
-
-/* ================= FOOTER – MOBILE FIX ================= */
-@media (max-width: 576px) {
-
-  footer {
-    padding: 2.5rem 1.25rem 1.5rem;
-  }
-
-  footer nav {
-    margin-bottom: 1.5rem;
-  }
-
-  footer .nav-links {
-    flex-wrap: wrap;
-    gap: 1.25rem;
-    justify-content: center;
-    padding: 0 1rem;        /* space from screen edges */
-    box-sizing: border-box;
-  }
-
-  footer .nav-links li {
-    margin: 0.25rem 0.5rem; /* breathing space per item */
-  }
-
-  footer .nav-links li a {
-    font-size: 1rem;
-  }
-
-  footer p {
-    margin-top: 1rem;
-    font-size: 0.9rem;
-    line-height: 1.5;
-    opacity: 0.8;
   }
 }
