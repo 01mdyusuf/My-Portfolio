@@ -10,6 +10,12 @@
 /* ================= RESPONSIVE FIX – SINGLE SOURCE ================= */
 
 /* ---------- TABLET & BELOW ---------- */
+@media (min-width: 1024px) {
+  section {
+    padding: 5vh 10%;
+  }
+}
+
 @media (max-width: 1200px) {
 
   /* Navbar */
