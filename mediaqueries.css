@@ -124,6 +124,12 @@
     flex-wrap: wrap;
     gap: 1.25rem;
     justify-content: center;
+    padding: 0 1rem;        /* space from screen edges */
+    box-sizing: border-box;
+  }
+
+  footer .nav-links li {
+    margin: 0.25rem 0.5rem; /* breathing space per item */
   }
 
   footer .nav-links li a {
