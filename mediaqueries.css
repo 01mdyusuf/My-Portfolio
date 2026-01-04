@@ -1,24 +1,18 @@
-/* DARK MODE TOGGLE VISIBILITY */
-/* #dark-mode-toggle {
-  display: inline-flex;
-}
+/* =====================================================
+   RESPONSIVE SYSTEM — SINGLE SOURCE OF TRUTH
+   Desktop-first (base styles in style.css)
+   ===================================================== */
 
-#dark-mode-toggle-mobile {
-  display: none;
-} */
 
-/* ================= RESPONSIVE FIX – SINGLE SOURCE ================= */
+/* ===================== LARGE SCREENS ===================== */
+/* No layout changes needed — desktop styles already apply */
 
-/* ---------- TABLET & BELOW ---------- */
-@media (min-width: 1024px) {
-  section {
-    padding: 5vh 2rem;
-  }
-}
 
-@media (max-width: 1200px) {
+/* ===================== TABLETS & SMALL LAPTOPS ===================== */
+/* 992px is the real industry breakpoint */
+@media (max-width: 992px) {
 
-  /* Navbar */
+  /* NAVBAR */
   #desktop-nav {
     display: none;
   }
@@ -27,64 +21,58 @@
     display: flex;
   }
 
-  /* Sections */
+  /* GLOBAL SECTION PADDING */
   section {
     padding: 4rem 2rem;
   }
 
-  /* Profile layout */
+  /* PROFILE LAYOUT (STACKS ONCE — HERE) */
   .section-container {
     flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    width: 100%;
-  }
-
-  /* Profile image */
-  .section__pic-container {
-    width: 100%;
-    max-width: 300px;
-    aspect-ratio: 1 / 1;
-    border-radius: 2.5rem;
-    overflow: hidden;
-    margin: 0 auto 1.5rem;
-  }
-
-  .section__pic-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  /* Text */
-  .section__text {
-    width: 100%;
+    gap: 2.5rem;
     text-align: center;
   }
 
+  /* PROFILE IMAGE */
+  .section__pic-container {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  /* PROFILE TEXT */
+  .section__text {
+    align-items: center;
+  }
+
+  /* BUTTONS */
   .btn-container {
     flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* ABOUT / PROJECTS */
+  .about-containers {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
-/* ---------- MOBILE ---------- */
-@media (max-width: 768px) {
 
+/* ===================== MOBILE PHONES ===================== */
+/* 576px is the real mobile breakpoint */
+@media (max-width: 576px) {
+
+  /* TIGHTER SPACING */
   section {
     padding: 3rem 1.25rem;
   }
 
-  .section-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    width: 100%;
-  }
-
+  /* PROFILE IMAGE */
   .section__pic-container {
-    max-width: 260px;
+    max-width: 240px;
   }
 
+  /* TYPOGRAPHY */
   .title {
     font-size: 2rem;
   }
@@ -93,33 +81,30 @@
     font-size: 1.2rem;
   }
 
-  .btn-container {
-    flex-wrap: wrap;
-  }
-
-  .about-containers,
-  #projects .about-containers {
-    flex-direction: column;
-    align-items: center;
-  }
-
+  /* CARDS */
   .details-container,
   .color-container {
     width: 100%;
     max-width: 360px;
   }
+
+  /* CONTACT */
+  .contact-info-upper-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
 }
 
 
-/* ---------- SMALL PHONES ---------- */
-@media (max-width: 480px) {
+/* ===================== SMALL PHONES ===================== */
+/* Older / very small devices */
+@media (max-width: 400px) {
 
   .section__pic-container {
-    max-width: 230px;
+    max-width: 220px;
   }
 
   .title {
     font-size: 1.8rem;
   }
 }
-
