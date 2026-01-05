@@ -49,13 +49,3 @@ This portfolio represents:
 - Git & GitHub – Version control & deployment
 
 - GitHub Pages – Hosting
-
-# Contact
-
-Feel free to reach out:
-
-- Email: mdyusuf@gmail.com
-
-- LinkedIn: 
-
-- GitHub: https://github.com/01mdyusuf
