@@ -8,6 +8,15 @@
 /* 992px = real-world breakpoint */
 @media (max-width: 992px) {
 
+.details-container,
+.color-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 1.5rem; 
+
+}
+
   /* NAVBAR */
   #desktop-nav {
     display: none;
@@ -49,10 +58,13 @@
   /* ABOUT / PROJECTS */
   .about-containers {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
   }
-}
 
+.about-description {
+  max-width: 100%;
+}
+}
 
 /* ===================== MOBILE PHONES ===================== */
 /* 576px = standard mobile */
