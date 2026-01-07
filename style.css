@@ -374,6 +374,12 @@ html, body {
   flex-direction: column;
 }
 
+.about-description {
+  max-width: 900px;
+  margin: 2rem auto 0;
+  text-align: center;
+}
+
 .about-containers,
 .about-details-container {
   display: flex;
@@ -381,6 +387,12 @@ html, body {
 
 .about-pic {
   border-radius: 2rem;
+}
+
+.skills-containers {
+  display: flex;
+  gap: 2rem;
+  align-items: stretch;
 }
 /* 
 .arrow {
